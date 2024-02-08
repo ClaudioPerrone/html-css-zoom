@@ -1,50 +1,38 @@
- /*-----------------------------
+/*-----------------------------
             RESET   
  -----------------------------*/
- *
- {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
 /*-----------------------------
             GENERAL   
 -----------------------------*/
 body
 {
-   background-color: darkslategray;
-   font-family: "Roboto", sans-serif;
+    background-color: black;
+    font-family: "Roboto", sans-serif;
 }
-.name-user *, .view *
+h4
 {
-   display: inline;
-}
-.view, .display
-{
-    display: inline;
-    color: white;
-    background-color: #4a4a4a;
-    text-align: center;
-    line-height: 35px;
-    height: 35px;
-    border-radius: 8px;
-    padding: 3px 8px;
-    font-size: 20px;
+    font-size: large;
 }
 /*-----------------------------
            HEADER   
 -----------------------------*/
 header
 {
-   background-color: black;
-   height: 40px;
-   position: relative;
+    background-color: black;
+    height: 50px;
+    position: relative;
 }
 .container-header
 {
-    top: 5px;
-    right: 5px;
     position: absolute;
+    top: 10px;
+    right: 10px;
 }
 .view
 {
@@ -55,30 +43,24 @@ header
 -----------------------------*/
 main
 {
-    background-color: black;
-    height: calc(100vh / 100px);
+    height: calc(100vh-205px);
+    overflow-y: auto;
 }
 .container-main
-{
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-[class$="-row"]
 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 5px 0px;
+    height: 100%;
+    padding: 20px 0;
 }
 .container-image
 {
-    display: inline;
     position: relative;
-    padding: 5px;
+    width: 300px;
+    height: 200px;
+    border: 10px solid black;
 }
 .name-user
 {
@@ -87,8 +69,21 @@ main
     color: azure;
     background-color: rgba(80, 80, 80, 0.6);
     padding: 5px;
-    bottom: 10px;
-    left: 5px;
+    bottom: 0;
+    left: 0;
+}
+.name-user *, .view *
+{
+   display: inline;
+}
+.view, .display
+{
+    display: inline;
+    color: white;
+    background-color: #4a4a4a;
+    padding: 5px 5px;
+    border-radius: 8px;
+    font-size: 20px;
 }
 /*-----------------------------
             FOOTER   
@@ -96,24 +91,111 @@ main
 footer
 {
     background-color: #222222;
-    height: 150px;
-    border: 2px solid white;
-    position: relative;
+    height: 155px;
 }
 .container-footer
 {
-    height: 50px;
-    position: absolute;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+/*-----------------------------
+        AUDIO-VIDEO   
+-----------------------------*/
 .audio-video
 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+.audio, .video
+{
+    font-size: 50px;
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    width: 150px;
+    cursor: pointer;
     position: relative;
 }
-.audio
+.up-audio, .up-video
 {
+    font-size: medium;
     position: absolute;
-
+    border-style: none;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    right: 5px;
+    bottom: 50px;
+}
+.video:hover, .audio:hover
+{
+    background-color: #4a4a4a;
+}
+/*-----------------------------
+            CONTROLS   
+-----------------------------*/
+.controls
+{
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1600px;
+}
+.controls > div
+{
+    font-size: 50px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+    width: 190px;
+    cursor: pointer;
+    position: relative;
+}
+.up-share
+{
+    font-size: medium;
+    position: absolute;
+    border-style: none;
+    background-color: inherit;
+    color: white;
+    cursor: pointer;
+    right: 5px;
+    bottom: 50px;
+}
+.share > i
+{
+    color: #4bc800;
+}
+.controls > div:hover
+{
+    background-color: #4a4a4a;
+}
+/*-----------------------------
+        END-MEETING   
+-----------------------------*/
+.end-meeting
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    cursor: pointer;
+    background-color: #4a4a4a;
+    color: red;
+}
+.end-meeting:hover
+{
+    background-color: #5a5a5a;
 }
 
 
